@@ -1,0 +1,5 @@
+{
+ "name": "mrmilu/mrmilu_language",
+ "description": "Provides blocks and functionality related to languages",
+ "type": "drupal-mrmilu-module"
+}
