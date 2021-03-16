@@ -24,8 +24,9 @@ class LanguageSwitcher extends LanguageBlock {
   public function build() {
     $build = parent::build();
     if (!empty($build['#links'])) {
+      $prefixes = \Drupal::config('language.negotiation')->get('url.prefixes');
       foreach ($build['#links'] as $language_id => &$link) {
-        $link['title'] = $language_id;
+        $link['title'] = $prefixes[$language_id] ? $prefixes[$language_id] : $language_id;
       }
     }
     return $build;
